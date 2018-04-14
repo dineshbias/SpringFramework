@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
+	default-init-method="init" default-destroy-method="destroy">
+
+	<bean id="spellChecker" class="com.sample.core.di.SpellChecker">
+
+	</bean>
+
+	<bean id="textEditor" class="com.sample.core.di.TextEditor">
+		<constructor-arg ref="spellChecker"/>
+		<constructor-arg value="5"/>
+	</bean>
+	
+	<bean id="house" class="com.sample.core.di.House">
+		<constructor-arg ref="address"/>
+		<property name="person" ref="person" />
+	</bean>
+		
+	<bean id="person" class="com.sample.core.di.Person">
+		<constructor-arg index="0" value="Dinesh Joshi" />
+		<constructor-arg index="1" value="32" />
+		<constructor-arg index="2" value="MALE" />
+	</bean>
+	
+	<bean id="address" class="com.sample.core.di.Adress">
+		<property name="number" value="D-311/2" />
+		<property name="locality" value="subhash nagar" />
+		<property name="city" value="roorkee" />
+		<property name="pincode" value="247667" />
+	</bean>
+	
+	
+	
+</beans>

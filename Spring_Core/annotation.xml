@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+	
+	<context:annotation-config /> 
+	
+	<!-- Definition for student bean -->
+
+	<bean id="student1" class="com.sample.core.annotation.Student">
+		<property name="name" value="Zara" />
+	</bean>
+
+	<bean id="textEditor" class="com.sample.core.annotation.TextEditor">
+	</bean>
+
+	<bean id="spellChecker" class="com.sample.core.annotation.SpellChecker">
+	</bean>
+
+	<bean id="student2" class="com.sample.core.annotation.Student">
+		<property name="name" value="Dinesh Joshi" />
+		<property name="age" value="32" />
+	</bean>
+
+	<!-- Definition for profile bean -->
+	<bean id="profile" class="com.sample.core.annotation.Profile">
+	</bean>
+
+	<!-- Definition for profile bean -->
+	<bean id="hello" class="com.sample.core.annotation.HelloWorld">
+	</bean>
+
+</beans>

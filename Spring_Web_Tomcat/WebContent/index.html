@@ -1,0 +1,13 @@
+<html>
+<head>Login Page</head>
+<body>
+<form action="/Spring_Web_Tomcat/login" method="POST">
+	Username:<br>
+	<input type="text" name="username"><br>
+	Password:<br>
+	<input type="text" name="password"><br>
+	<br>
+	<input type="submit" value="Submit">
+</form>
+</body>
+</html>

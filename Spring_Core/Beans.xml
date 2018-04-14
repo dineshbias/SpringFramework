@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
+	default-init-method="init" default-destroy-method="destroy">
+	
+	<bean id="helloWorld" class="com.sample.core.configuration.xml.HelloWorld">
+		<property name="message" value="Hello World!" />
+	</bean>
+	
+	<bean id="helloPrototype" class="com.sample.core.configuration.xml.HelloPrototype" scope="prototype">
+		<property name="message" value="Hello prototype" />
+	</bean>
+	
+	<bean id="helloOnInit" class="com.sample.core.configuration.xml.HelloInit" init-method="callOnInit">
+		<property name="message" value="Hello on Init!" />
+	</bean>
+	
+	<bean id="helloOnDestory" class="com.sample.core.configuration.xml.HelloDestroy" destroy-method="callOnDestroy">
+		<property name="message" value="Hello Destroyed" />
+	</bean>
+	
+	<bean id="helloAllInOne" class="com.sample.core.configuration.xml.HelloAllInOne" lazy-init="true" init-method="callOnInit" destroy-method="callOnDestroy">
+		<property name="message" value="Hello All in one" />
+	</bean>
+	
+	<bean id="helloLazy" class="com.sample.core.configuration.xml.HelloLazy" lazy-init="true">
+		<property name="message" value="Hello Lazy!" />
+	</bean>
+	
+	
+	
+	<bean class="com.sample.process.InitHelloWorldProcessor1" />
+	<bean class="com.sample.process.InitHelloWorldProcessor2" />
+	
+	
+</beans>

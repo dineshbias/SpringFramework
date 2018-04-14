@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:sch="http://test.math.bottom.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://test.math.bottom.com/" targetNamespace="http://test.math.bottom.com/">
+  <wsdl:types>
+    <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" targetNamespace="http://test.math.bottom.com/" version="1.0">
+		  
+  <xs:element name="getfactorialRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="number" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+   </xs:element>
+   
+   <xs:element name="getfactorialResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="number" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="addIntegersRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="number1" type="xs:int"/>
+      			<xs:element name="number2" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="addIntegersResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="sum" type="xs:int"/>
+      		</xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+</xs:schema>
+  </wsdl:types>
+  
+  <wsdl:message name="getfactorialRequest">
+    <wsdl:part element="tns:getfactorialRequest" name="getfactorialRequest">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getfactorialResponse">
+    <wsdl:part element="tns:getfactorialResponse" name="getfactorialResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="addIntegersResponse">
+    <wsdl:part element="tns:addIntegersResponse" name="addIntegersResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="addIntegersRequest">
+    <wsdl:part element="tns:addIntegersRequest" name="addIntegersRequest">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="OperationPort">
+    <wsdl:operation name="getfactorial">
+      <wsdl:input message="tns:getfactorialRequest" name="getfactorialRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:getfactorialResponse" name="getfactorialResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addIntegers">
+      <wsdl:input message="tns:addIntegersRequest" name="addIntegersRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:addIntegersResponse" name="addIntegersResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="OperationPortSoap11" type="tns:OperationPort">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getfactorial">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="getfactorialRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getfactorialResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addIntegers">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="addIntegersRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="addIntegersResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="OperationPortService">
+    <wsdl:port binding="tns:OperationPortSoap11" name="OperationPortSoap11">
+      <soap:address location="http://127.0.0.1:9000/ws"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

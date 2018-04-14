@@ -1,0 +1,29 @@
+{
+   "schemas": [
+      "urn:scim:schemas:core:1.0",
+      "urn:scim:schemas:extension:enterprise:1.0",
+      "urn:scim:schemas:extension:facebook:starttermdates:1.0",
+      "urn:scim:schemas:extension:facebook:accountstatusdetails:1.0",
+      "urn:scim:schemas:extension:facebook:auth_method:1.0"
+   ],
+   "id": 100024332531264,
+   "userName": "niranjan.sovani\u0040globant.com",
+   "name": {
+      "formatted": "Niranjan Sovani"
+   },
+   "locale": "es_LA",
+   "active": true,
+   "urn:scim:schemas:extension:facebook:starttermdates:1.0": {
+      "startDate": 0,
+      "termDate": 0
+   },
+   "urn:scim:schemas:extension:facebook:accountstatusdetails:1.0": {
+      "claimed": true,
+      "claimDate": 1518166353,
+      "invited": true,
+      "inviteDate": 1518018378
+   },
+   "urn:scim:schemas:extension:facebook:auth_method:1.0": {
+      "auth_method": "password"
+   }
+}

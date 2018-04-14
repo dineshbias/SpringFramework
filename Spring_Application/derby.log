@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Tue May 02 11:50:54 IST 2017:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.11.1.2 - (1629631): instance a816c00e-015b-c7d1-9c1f-000000daf800 
+on database directory C:\Users\edinjos\Desktop\backup\ubuntu_BackUp\Workspace\Workspace_CoreJava8\Spring_Application\testAnnotationDB with class loader sun.misc.Launcher$AppClassLoader@dad5dc 
+Loaded from file:/C:/Users/edinjos/Desktop/backup/ubuntu_BackUp/Workspace/Workspace_CoreJava8/Spring_Application/libs/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_66-b18
+user.dir=C:\Users\edinjos\Desktop\backup\ubuntu_BackUp\Workspace\Workspace_CoreJava8\Spring_Application
+os.name=Windows 7
+os.arch=x86
+os.version=6.1
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
